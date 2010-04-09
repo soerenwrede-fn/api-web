@@ -6,7 +6,7 @@
          xmlns="http://usefulinc.com/ns/doap#">
   <name>API Web Site</name>
   <shortname>api-web</shortname>
-  <shortdesc>DO NOT COMMIT TO THIS MODULE UNLESS ok'd by gnome-sysadmin!</shortdesc>
+  <shortdesc>DO NOT COMMIT TO THIS MODULE unless ok'd by gnome-sysadmin!</shortdesc>
   <description>
     DO NOT COMMIT TO THIS MODULE!
   </description>

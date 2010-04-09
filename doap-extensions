@@ -1,0 +1,84 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:doap="http://usefulinc.com/ns/doap#"
+         xmlns:gnome="http://api.gnome.org/doap-extensions#"
+>
+
+<!-- Copyright © 2009 Shaun McCance <shaunm@gnome.org> -->
+
+<owl:Ontology rdf:about="http://api.gnome.org/doap-extensions#">
+  <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/index.rdf" />
+  <owl:imports rdf:resource="http://usefulinc.com/ns/doap#" />
+  <dc:title>DOAP Extensions for Gnome</dc:title>
+  <dc:description>Extensions for the Description of a Project (DOAP) vocabulary used for project tracking in the Gnome project.</dc:description>
+  <dc:creator>Shaun McCance</dc:creator>
+  <dc:format>application/rdf+xml</dc:format>
+  <dc:rights>Copyright © 2009 Shaun McCance</dc:rights>
+  <foaf:maker>
+    <foaf:Person>
+      <foaf:name>Shaun McCance</foaf:name>
+      <foaf:mbox rdf:resource="mailto:shaunm@gnome.org" />
+    </foaf:Person>
+  </foaf:maker>
+</owl:Ontology>
+
+<rdf:Property rdf:about="http://api.gnome.org/doap-extensions#userid">
+  <rdfs:isDefinedBy rdf:resource="http://api.gnome.org/doap-extensions#" />
+  <rdfs:label xml:lang="en">userid</rdfs:label>
+  <rdfs:comment xml:lang="en">The Gnome user id.</rdfs:comment>
+  <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Description rdf:about="http://api.gnome.org/doap-extensions#admin">
+  <dc:title>FIXME</dc:title>
+  <dc:shortdesc>FIXME</dc:shortdesc>
+  <rdfs:isDefinedBy rdf:resource="http://api.gnome.org/doap-extensions#" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://api.gnome.org/doap-extensions#bindings">
+  <dc:title>FIXME</dc:title>
+  <dc:shortdesc>FIXME</dc:shortdesc>
+  <rdfs:isDefinedBy rdf:resource="http://api.gnome.org/doap-extensions#" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://api.gnome.org/doap-extensions#deprecated">
+  <dc:title>FIXME</dc:title>
+  <dc:shortdesc>FIXME</dc:shortdesc>
+  <rdfs:isDefinedBy rdf:resource="http://api.gnome.org/doap-extensions#" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://api.gnome.org/doap-extensions#desktop">
+  <dc:title>Gnome Desktop</dc:title>
+  <dc:shortdesc>DOAP category for projects in the Gnome Desktop</dc:shortdesc>
+  <rdfs:isDefinedBy rdf:resource="http://api.gnome.org/doap-extensions#" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://api.gnome.org/doap-extensions#development">
+  <dc:title>FIXME</dc:title>
+  <dc:shortdesc>FIXME</dc:shortdesc>
+  <rdfs:isDefinedBy rdf:resource="http://api.gnome.org/doap-extensions#" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://api.gnome.org/doap-extensions#infrastructure">
+  <dc:title>FIXME</dc:title>
+  <dc:shortdesc>FIXME</dc:shortdesc>
+  <rdfs:isDefinedBy rdf:resource="http://api.gnome.org/doap-extensions#" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://api.gnome.org/doap-extensions#platform">
+  <dc:title>Gnome Developer Platform</dc:title>
+  <dc:shortdesc>DOAP category for projects in the Gnome Developer Platform</dc:shortdesc>
+  <rdfs:isDefinedBy rdf:resource="http://api.gnome.org/doap-extensions#" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://api.gnome.org/doap-extensions#productivity">
+  <dc:title>FIXME</dc:title>
+  <dc:shortdesc>FIXME</dc:shortdesc>
+  <rdfs:isDefinedBy rdf:resource="http://api.gnome.org/doap-extensions#" />
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,52 @@
+The files in this directory are used by Evolution 3.6 and later to
+automatically configure email accounts.  This so that you can tell it,
+"My mail is example@gmail.com" and it will automatically figure out that
+it must use imap.googlemail.com and smtp.googlemail.com.
+
+The files in this directory use the <clientConfig version="1.1"> format,
+whereas files in the parent directory use the initial <clientConfig> format.
+As far as I can tell, there's merely some naming differences between the two.
+
+The files themselves need to be named after an authoritative name server
+for the domains listed in the file, based on the domain's MX record in DNS.
+
+For example:
+
+  $ dig mx rocketmail.com
+
+  ; <<>> DiG 9.8.1-P1 <<>> mx rocketmail.com
+  ;; global options: +cmd
+  ;; Got answer:
+  ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 4974
+  ;; flags: qr rd ra; QUERY: 1, ANSWER: 5, AUTHORITY: 5, ADDITIONAL: 16
+
+  ... <snipped> ...
+
+  ;; AUTHORITY SECTION:
+  rocketmail.com.		29284	IN	NS	ns1.yahoo.com.
+  rocketmail.com.		29284	IN	NS	ns5.yahoo.com.
+  rocketmail.com.		29284	IN	NS	ns3.yahoo.com.
+  rocketmail.com.		29284	IN	NS	ns4.yahoo.com.
+  rocketmail.com.		29284	IN	NS	ns2.yahoo.com.
+
+  ... <snipped> ...
+
+  ;; Query time: 101 msec
+  ;; SERVER: 10.5.26.21#53(10.5.26.21)
+  ;; WHEN: Fri Mar 23 08:25:42 2012
+  ;; MSG SIZE  rcvd: 505
+
+Evolution will perform its own MX record lookup, extract one of the name
+server (NS) records from the authority section as shown above, and then
+pare down the name server's host name until it gets a match like so:
+
+  http://api.gnome.org/evolution/autoconfig/1.1/ns1.yahoo.com : NOT FOUND
+  http://api.gnome.org/evolution/autoconfig/1.1/yahoo.com     : FOUND!
+
+FIXME: Write a test script to ensure all files meet this requirement.
+
+These files are copied from
+http://live.mozillamessaging.com/sites/autoconfig.mozillamessaging.com/trunk
+
+  Matthew Barnes
+  March 2012

@@ -43,7 +43,8 @@ pare down the name server's host name until it gets a match like so:
   http://api.gnome.org/evolution/autoconfig/1.1/ns1.yahoo.com : NOT FOUND
   http://api.gnome.org/evolution/autoconfig/1.1/yahoo.com     : FOUND!
 
-FIXME: Write a test script to ensure all files meet this requirement.
+Run the test-nameservers.py script periodically to verify symbolic links
+for authoritative name server domains.
 
 These files are copied from
 http://live.mozillamessaging.com/sites/autoconfig.mozillamessaging.com/trunk

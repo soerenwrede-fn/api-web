@@ -58,7 +58,6 @@ def file_exists(ns_domain):
 
 def resolve_ns(domain, filename):
 	try:
-		answer = dns.resolver.query(domain, 'NS')
 		for rdata in dns.resolver.query(domain, 'NS'):
 			# Trim the trailing dot
 			ns_domain = str(rdata)[:-1]

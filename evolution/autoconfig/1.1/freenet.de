@@ -46,11 +46,11 @@
       <authentication>password-encrypted</authentication>
       <username>%EMAILADDRESS%</username>
     </outgoingServer>
-    <documentation url="http://kundenservice.freenet.de/hilfe/email/programme/config/index.html">
+    <documentation url="http://email-hilfe.freenet.de/documents/Beitrag/15916/einstellungen-serverdaten-fuer-alle-e-mail-programme">
       <descr lang="en">Generic settings page</descr>
     </documentation>
-    <documentation url="http://kundenservice.freenet.de/hilfe/email/programme/config/thunderbird/imap-thunderbird/imap/index.html">
-      <descr lang="en">TB 2.0 IMAP settings</descr>
+    <documentation url="http://email-hilfe.freenet.de/documents/Beitrag/15808/thunderbird-e-mail-empfang-versand-einrichten-ueber-imap">
+      <descr lang="en">TB IMAP settings</descr>
     </documentation>
   </emailProvider>
 </clientConfig>
